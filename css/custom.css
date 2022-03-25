@@ -568,3 +568,37 @@ hr.footer-divider {
         font-size: 14px;
     }
 }
+
+.token-item {
+    text-align: center;
+    margin-bottom: 40px;
+}
+.token-item h3 {
+    font-size: 22px;
+    margin-bottom: 0;
+}
+.donation-iconn i {
+    font-size: 120px;
+}
+.dark .form-control:not(.not-dark), .dark .sm-form-control:not(.not-dark) {
+    background-color: #fff;
+}
+.donation-form label {
+    color: #fff;
+    font-size: 22px;
+    margin-bottom: 0;
+}
+.donate-button {
+    text-align: center;
+    margin-top: 30px;
+}
+.donate-button .button {
+    height: 48px;
+    line-height: 48px;
+    font-size: 22px;
+    margin: 0;
+}
+.donate-button .button:hover {
+    background-color: #fff;
+    color: #15562D;
+}
