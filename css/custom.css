@@ -625,3 +625,18 @@ hr.footer-divider {
 .cont-phone > a {
     color: #000;
 }
+.team-item-wrap {
+    padding-right: 0;
+}
+.team-item-wrap .team-image {
+    height: 160px;
+    object-fit: cover;
+}
+.team-item-wrap h4 {
+    margin-top: 15px;
+}
+.team-item-wrap p {
+    margin-bottom: 0;
+    font-style: italic;
+}
+.team-item-wrap ul {font-size: 14px;margin-left: 15px;font-family: 'gilroy-regularuploaded_file';}
