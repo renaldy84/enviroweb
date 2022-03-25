@@ -449,7 +449,7 @@
 								<div class="heading-block nobottomborder">
 									<h2>Distribution</h2>
 								</div>
-								<div class="">
+								<div class="divcenter chart-wrapper">
 									<canvas id="chart-0"></canvas>
 								</div>
 							</div>
@@ -663,9 +663,9 @@
 			},
 			options: {
 				responsive: true,
-				// maintainAspectRatio: false,
+				maintainAspectRatio: false,
 				legend: {
-					position: 'right',
+					position: 'top',
 					labels: {
 	                    fontColor: "white"
 	                } 
@@ -673,7 +673,8 @@
 				title: {
 					display: true,
 					text: 'Supply Token',
-					fontColor: 'white'
+					fontColor: 'white',
+					fontSize: 24
 				},
 				animation: {
 					animateScale: true,

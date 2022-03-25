@@ -345,6 +345,74 @@ hr.footer-divider {
     margin-left: 30px;
 }
 
+.token-item {
+    text-align: center;
+    margin-bottom: 40px;
+}
+.token-item h3 {
+    font-size: 22px;
+    margin-bottom: 0;
+}
+.donation-iconn i {
+    font-size: 120px;
+}
+.dark .form-control:not(.not-dark), .dark .sm-form-control:not(.not-dark) {
+    background-color: #fff;
+}
+.donation-form label {
+    color: #fff;
+    font-size: 22px;
+}
+.donate-button {
+    margin-top: 30px;
+}
+.donate-button .button {
+    height: 42px;
+    line-height: 42px;
+    font-size: 18px;
+    margin: 0;
+    padding: 0 40px;
+}
+.donate-button .button:hover {
+    background-color: #fff;
+    color: #15562D;
+}
+.token-item {
+    background-color: #fff;
+    color: #000;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 30px;
+}
+.token-item h3 {
+    color: #333;
+}
+.token-item p {
+    margin-bottom: 0;
+}
+.cont-phone > a {
+    color: #000;
+}
+.team-item-wrap {
+    padding-right: 0;
+}
+.team-item-wrap .team-image {
+    height: 160px;
+    object-fit: cover;
+}
+.team-item-wrap h4 {
+    margin-top: 15px;
+}
+.team-item-wrap p {
+    margin-bottom: 0;
+    font-style: italic;
+}
+.team-item-wrap ul {font-size: 14px;margin-left: 15px;font-family: 'gilroy-regularuploaded_file';}
+.chart-wrapper {
+    max-width: 60%;
+    min-height: 500px;
+}
+
 @media (max-width: 575px) {
     #page-menu {
         display: none;
@@ -575,68 +643,7 @@ hr.footer-divider {
     .token-item h3 {
         font-size: 16px;
     }
+    .chart-wrapper {
+        max-width: 100%;
+    }
 }
-
-.token-item {
-    text-align: center;
-    margin-bottom: 40px;
-}
-.token-item h3 {
-    font-size: 22px;
-    margin-bottom: 0;
-}
-.donation-iconn i {
-    font-size: 120px;
-}
-.dark .form-control:not(.not-dark), .dark .sm-form-control:not(.not-dark) {
-    background-color: #fff;
-}
-.donation-form label {
-    color: #fff;
-    font-size: 22px;
-}
-.donate-button {
-    margin-top: 30px;
-}
-.donate-button .button {
-    height: 42px;
-    line-height: 42px;
-    font-size: 18px;
-    margin: 0;
-    padding: 0 40px;
-}
-.donate-button .button:hover {
-    background-color: #fff;
-    color: #15562D;
-}
-.token-item {
-    background-color: #fff;
-    color: #000;
-    border-radius: 8px;
-    padding: 15px;
-    margin-bottom: 30px;
-}
-.token-item h3 {
-    color: #333;
-}
-.token-item p {
-    margin-bottom: 0;
-}
-.cont-phone > a {
-    color: #000;
-}
-.team-item-wrap {
-    padding-right: 0;
-}
-.team-item-wrap .team-image {
-    height: 160px;
-    object-fit: cover;
-}
-.team-item-wrap h4 {
-    margin-top: 15px;
-}
-.team-item-wrap p {
-    margin-bottom: 0;
-    font-style: italic;
-}
-.team-item-wrap ul {font-size: 14px;margin-left: 15px;font-family: 'gilroy-regularuploaded_file';}
