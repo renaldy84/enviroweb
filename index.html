@@ -606,13 +606,15 @@
 				]
 			},
 			options: {
-				tooltips: {
-				      callbacks: {
-					  label: function(tooltipItem, data) {
-					      return tooltipItem.yLabel.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
-					  }
-				      }
-				  },
+				scales: {
+                yAxes: [{
+                    ticks: {
+                        callback: function (value) {
+                            return numeral(value).format('0,0')
+                        }
+                    }
+                }]
+            }
 				responsive: true,
 				maintainAspectRatio: false,
 				legend: {
