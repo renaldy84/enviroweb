@@ -630,13 +630,14 @@
 			},
 			options: {
 				tooltips: {
-            callbacks: {
-                label: function(tooltipItem, chart){
-                    var datasetLabel = chart.datasets[tooltipItem.datasetIndex].label || '';
-                    return datasetLabel + ':  ' + number_format(tooltipItem.yLabel, 2);
-                }
-            }
-        },
+		            callbacks: {
+		                label: function(tooltipItem, chart){
+
+		                    var datasetLabel = chart.labels[tooltipItem.datasetIndex] || '';
+		                    return datasetLabel + ':  ' + number_format(chart.datasets[0].data[parseInt(tooltipItem.index)], 0) + " Token";
+		                }
+		            }
+		        },
 				responsive: true,
 				maintainAspectRatio: false,
 				legend: {
