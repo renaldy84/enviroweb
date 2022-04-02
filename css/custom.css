@@ -415,6 +415,10 @@ hr.footer-divider {
 #footer {
     padding-bottom: 20px;
 }
+.team-item-wrap .team-image {
+    width: 100%;
+    border-radius: 50%;
+}
 
 @media (max-width: 575px) {
     #page-menu {
