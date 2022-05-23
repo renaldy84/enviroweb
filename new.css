@@ -190,6 +190,7 @@ html, body {
   font-size: 50px;
   font-weight: 700;
   line-height: 1.25;
+  margin: 0;
 }
 
 .section h4 {
@@ -294,6 +295,33 @@ html, body {
   margin-top: 30px;
   width: 500px;
   height: 500px;
+}
+
+/*
+----------------------------------------------------------------
+	Section #whitepaper
+-----------------------------------------------------------------
+*/
+
+.section#whitepaper {
+  background-image: url("./images/section-5.jpg");
+  background-position: center bottom;
+  padding: 50px 0;
+  text-align: center;
+}
+
+.section#whitepaper .section__wrapper {
+  align-items: center;
+  justify-content: center;
+}
+
+.section#whitepaper h4 {
+  margin-top: 60px;
+}
+
+.section#whitepaper .button {
+  display: inline-block;
+  margin-top: 50px;
 }
 
 /* Media Queries sizes */
@@ -431,6 +459,11 @@ html, body {
     content: ' ';
   }
 
+  .section__title::after {
+    bottom: -15px;
+    width: 50%;
+  }
+
   /*
   ----------------------------------------------------------------
     Section #home
@@ -474,5 +507,20 @@ html, body {
   .section#objectives img {
     width: 300px;
     height: 300px;
+  }
+
+  /*
+  ----------------------------------------------------------------
+    Section #whitepaper
+  -----------------------------------------------------------------
+  */
+
+  .section#whitepaper {
+    padding: 35px 0 150px;
+    min-height: auto;
+  }
+
+  .section#whitepaper .button {
+    margin-top: 30px;
   }
 }
