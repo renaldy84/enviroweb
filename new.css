@@ -161,6 +161,57 @@ html, body {
 
 /*
 ----------------------------------------------------------------
+	Team
+-----------------------------------------------------------------
+*/
+
+.team__header {
+  text-align: center;
+}
+
+.team__title {
+  height: 50px;
+}
+
+.team__list {
+  display: flex;
+  list-style: none;
+  margin: 50px 0 0;
+  padding: 0;
+}
+
+.team__item {
+  flex: 1;
+  margin: 0 15px;
+}
+
+.team__photo {
+  width: 100%;
+}
+
+.team__name {
+  color: #000;
+  display: block;
+  font-weight: 700;
+  margin-top: 10px;
+}
+
+.team__position {
+  display: block;
+}
+
+.team__detail {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.team__detail li::before {
+  content: '- ';
+}
+
+/*
+----------------------------------------------------------------
 	Section
 -----------------------------------------------------------------
 */
@@ -178,6 +229,10 @@ html, body {
 .section h4, h5, h6,
 .section p {
   color: #FFF;
+}
+
+.section p {
+  margin: 0;
 }
 
 .section h1 {
@@ -398,6 +453,30 @@ html, body {
   text-align: right;
 }
 
+/*
+----------------------------------------------------------------
+	Section #about
+-----------------------------------------------------------------
+*/
+
+.section#about {
+  padding: 50px 0;
+  min-height: auto;
+}
+
+.section#about h2,
+.section#about p {
+  color: #000;
+}
+
+.section#about .content {
+  margin-top: 20px;
+}
+
+.section#about .team {
+  margin-top: 50px;
+}
+
 /* Media Queries sizes */
 /* $viewport-width-desktop: 1696px; /* Desktop */
 /* $viewport-width-large-laptop: 1440px; /* Laptop HiDPI */
@@ -509,6 +588,53 @@ html, body {
   .button {
     font-size: 16px;
     line-height: 25px;
+  }
+
+  /*
+  ----------------------------------------------------------------
+    Team
+  -----------------------------------------------------------------
+  */
+
+  .team__list {
+    display: block;
+    font-size: 0;
+    margin: 30px -15px 0;
+  }
+
+  .team__item {
+    display: inline-block;
+    margin: 10px 15px;
+    vertical-align: top;
+    width: calc(50% - 30px);
+  }
+
+  .team__photo {
+    width: 100%;
+  }
+
+  .team__name {
+    color: #000;
+    display: block;
+    font-size: 16px;
+    font-weight: 700;
+    margin-top: 10px;
+  }
+
+  .team__position {
+    display: block;
+    font-size: 16px;
+  }
+
+  .team__detail {
+    font-size: 16px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .team__detail li::before {
+    content: '- ';
   }
 
   /*
