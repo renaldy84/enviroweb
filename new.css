@@ -186,6 +186,12 @@ html, body {
   line-height: 1.25;
 }
 
+.section h2 {
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
 .section h4 {
   font-size: 25px;
   font-weight: 300;
@@ -202,9 +208,26 @@ html, body {
   max-width: 1200px;
 }
 
+.section__title {
+  text-align: center;
+  position: relative;
+}
+
+.section__title::after {
+  content: '';
+  background-color: #15562D;
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  bottom: -30px;
+  transform: translateX(-50%);
+  width: 138px;
+  height: 5px;
+}
+
 /*
 ----------------------------------------------------------------
-	Section #Home
+	Section #home
 -----------------------------------------------------------------
 */
 
@@ -243,6 +266,34 @@ html, body {
   margin-top: 30px;
   width: 12px;
   height: 32px;
+}
+
+/*
+----------------------------------------------------------------
+	Section #objectives
+-----------------------------------------------------------------
+*/
+
+.section#objectives {
+  background-image: url("./images/section-2.jpg");
+  padding: 50px 0;
+  text-align: center;
+}
+
+.section#objectives .section__wrapper {
+  align-items: center;
+  justify-content: center;
+}
+
+.section#objectives h4 {
+  margin-top: 60px;
+}
+
+.section#objectives img {
+  display: inline-block;
+  margin-top: 30px;
+  width: 500px;
+  height: 500px;
 }
 
 /* Media Queries sizes */
@@ -368,6 +419,10 @@ html, body {
     font-size: 30px;
   }
 
+  .section h2 {
+    font-size: 25px;
+  }
+
   .section h4 {
     font-size: 16px;
   }
@@ -378,7 +433,7 @@ html, body {
 
   /*
   ----------------------------------------------------------------
-    Section #Home
+    Section #home
   -----------------------------------------------------------------
   */
 
@@ -403,5 +458,21 @@ html, body {
     margin-top: 10px;
     width: 10px;
     height: 20px;
+  }
+
+  /*
+  ----------------------------------------------------------------
+    Section #objectives
+  -----------------------------------------------------------------
+  */
+
+  .section#objectives {
+    padding: 35px 0 30px;
+    min-height: auto;
+  }
+
+  .section#objectives img {
+    width: 300px;
+    height: 300px;
   }
 }
