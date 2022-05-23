@@ -88,6 +88,41 @@ html, body {
 
 /*
 ----------------------------------------------------------------
+	Footer
+-----------------------------------------------------------------
+*/
+
+.footer {
+  border-top: 2px solid #000;
+  display: flex;
+  align-items: center;
+  margin-top: 50px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  position: relative;
+  width: 100%;
+}
+
+.footer__logo {
+  font-size: 0;
+  position: relative;
+}
+
+.footer__logo .logo {
+  height: 60px;
+}
+
+.footer .footer__menu {
+  flex: 1;
+  justify-content: center;
+}
+
+.footer__menu .menu__link {
+  color: #000;
+}
+
+/*
+----------------------------------------------------------------
 	Content
 -----------------------------------------------------------------
 */
@@ -208,6 +243,97 @@ html, body {
 
 .team__detail li::before {
   content: '- ';
+}
+
+/*
+----------------------------------------------------------------
+  Social
+-----------------------------------------------------------------
+*/
+
+.social {
+  display: block;
+  list-style: none;
+  margin: 50px 0 0;
+  padding: 0;
+  text-align: center;
+}
+
+.social__item {
+  display: inline-block;
+}
+
+.social__link {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+  display: inline-block; 
+  margin: 15px;
+  width: 40px;
+  height: 40px;
+}
+
+.social__link--facebook {
+  background-image: url('./images/social-facebook.png');
+}
+
+.social__link--twitter {
+  background-image: url('./images/social-twitter.png');
+}
+
+.social__link--instagram {
+  background-image: url('./images/social-instagram.png');
+}
+
+.social__link--discord {
+  background-image: url('./images/social-discord.png');
+}
+
+.social__link--telegram {
+  background-image: url('./images/social-telegram.png');
+}
+
+.social__link--tiktok {
+  background-image: url('./images/social-tiktok.png');
+}
+
+.social__link--youtube {
+  background-image: url('./images/social-youtube.png');
+}
+
+/*
+----------------------------------------------------------------
+  Banner
+-----------------------------------------------------------------
+*/
+
+.banner {
+  background-image: url('./images/banner-background.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  backdrop-filter: blur(100px);
+  border-radius: 35px;
+  display: flex;
+  align-items: center;
+  padding: 50px 70px;
+}
+
+.banner__text {
+  color: #FFF;
+  font-size: 55px;
+  line-height: 60px;
+}
+
+.banner__action {
+  flex: 1;
+  text-align: right;
+}
+
+.banner__action .button {
+  border-radius: 15px;
+  padding: 10px 60px;
 }
 
 /*
@@ -477,6 +603,17 @@ html, body {
   margin-top: 50px;
 }
 
+
+/*
+----------------------------------------------------------------
+	Section #footer
+-----------------------------------------------------------------
+*/
+
+.section#footer {
+  min-height: auto;
+}
+
 /* Media Queries sizes */
 /* $viewport-width-desktop: 1696px; /* Desktop */
 /* $viewport-width-large-laptop: 1440px; /* Laptop HiDPI */
@@ -535,37 +672,6 @@ html, body {
 
   /*
   ----------------------------------------------------------------
-    Menu
-  -----------------------------------------------------------------
-  */
-  
-  .menu {
-    background-color: rgba(0, 0, 0, 0.95);
-    border-radius: 5px;
-    flex-direction: column;
-    padding: 5px 0;
-    width: 100%;
-  }
-  
-  .menu__item {
-    margin: 0;
-    padding: 5px 10px;
-    text-align: center;
-  }
-  
-  .menu__link {
-    font-size: 16px;
-    line-height: 20px;
-  }
-  
-  .menu__link:hover,
-  .menu__link:focus,
-  .menu__link.active {
-    color: #FFF;
-  }
-
-  /*
-  ----------------------------------------------------------------
     Header
   -----------------------------------------------------------------
   */
@@ -577,6 +683,62 @@ html, body {
   .header--mobile {
     display: flex;
     justify-content: space-between;
+  }
+
+  .header--mobile .menu {
+    background-color: rgba(0, 0, 0, 0.95);
+    border-radius: 5px;
+    flex-direction: column;
+    padding: 5px 0;
+    width: 100%;
+  }
+  
+  .header--mobile .menu__item {
+    margin: 0;
+    padding: 5px 10px;
+    text-align: center;
+  }
+  
+  .header--mobile .menu__link {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  
+  .header--mobile .menu__link:hover,
+  .header--mobile .menu__link:focus,
+  .header--mobile .menu__link.active {
+    color: #FFF;
+  }
+
+  /*
+  ----------------------------------------------------------------
+    Footer
+  -----------------------------------------------------------------
+  */
+
+  .footer {
+    display: block;
+    margin-top: 30px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+  }
+
+  .footer .footer__menu {
+    display: block;
+    margin-top: 50px;
+  }
+
+  .footer__menu .menu__item {
+    display: inline-block;
+  }
+
+  .footer__menu .menu__link {
+    font-size: 16px;
+  }
+
+  .footer__action {
+    margin-top: 50px;
   }
 
   /*
@@ -635,6 +797,51 @@ html, body {
 
   .team__detail li::before {
     content: '- ';
+  }
+
+  /*
+  ----------------------------------------------------------------
+    Social
+  -----------------------------------------------------------------
+  */
+
+  .social__link {
+    margin: 10px 15px;
+    width: 40px;
+    height: 40px;
+  }
+
+  /*
+  ----------------------------------------------------------------
+    Banner
+  -----------------------------------------------------------------
+  */
+
+  .banner {
+    border-radius: 35px;
+    display: block;
+    padding: 30px;
+  }
+
+  .banner__text {
+    font-size: 30px;
+    line-height: 35px;
+    text-align: center;
+  }
+  
+  .banner__text {
+    content: ' ';
+  }
+
+  .banner__action {
+    flex: none;
+    margin-top: 50px;
+    text-align: center;
+  }
+
+  .banner__action .button {
+    border-radius: 15px;
+    padding: 10px 60px;
   }
 
   /*
