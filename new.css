@@ -819,6 +819,35 @@ input[type="number"] {
   margin-top: 30px;
   width: 12px;
   height: 32px;
+  animation-name: arrow-down-animate;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes arrow-down-animate {
+  0%    { transform: translateY(0); }
+  50%  { transform: translateY(20px); }
+  100%  { transform: translateY(0); }
+}
+@-moz-keyframes arrow-down-animate {
+  0%    { transform: translateY(0); }
+  50%  { transform: translateY(20px); }
+  100%  { transform: translateY(0); }
+}
+@-ms-keyframes arrow-down-animate {
+  0%    { transform: translateY(0); }
+  50%  { transform: translateY(20px); }
+  100%  { transform: translateY(0); }
+}
+@-o-keyframes arrow-down-animate {
+  0%    { transform: translateY(0); }
+  50%  { transform: translateY(20px); }
+  100%  { transform: translateY(0); }
+}
+@keyframes arrow-down-animate {
+  0%    { transform: translateY(0); }
+  50%  { transform: translateY(20px); }
+  100%  { transform: translateY(0); }
 }
 
 /*
