@@ -563,7 +563,7 @@ input[type="number"] {
   background-color: #FFF;
   border: 1px solid #575755;
   border-radius: 25px;
-  padding: 10px 32px;
+  padding: 15px 20px;
   width: 100%;
 }
 
@@ -1227,6 +1227,7 @@ input[type="number"] {
     font-size: 16px;
     line-height: 25px;
     outline: none;
+    text-decoration: none;
   }
 
   .button:hover,
@@ -1441,6 +1442,17 @@ input[type="number"] {
   
   .roadmap__list-link {
     font-size: 12px;
+  }
+
+  /*
+  ----------------------------------------------------------------
+    Popup #popup-contribute
+  -----------------------------------------------------------------
+  */
+
+  .popup#popup-contribute .form__text {
+    font-size: 16px;
+    margin: 0;
   }
 
   /*
