@@ -3,6 +3,7 @@
 }
 
 html, body {
+  font-family: 'gilroy';
   margin: 0;
   padding: 0;
   position: relative;
@@ -239,8 +240,13 @@ html, body {
   text-align: center;
 }
 
-.team__title {
+.team__title.team__title--horizontal {
   height: 50px;
+}
+
+.team__title.team__title--vertical {
+  display: none;
+  height: 200px;
 }
 
 .team__list {
@@ -271,13 +277,22 @@ html, body {
 }
 
 .team__detail {
+  font-size: 16px;
   list-style: none;
   margin: 0;
-  padding: 0;
+  padding-left: 20px;
+}
+
+.team__detail li {
+  color: #000;
+  font-size: 14px;
+  position: relative;
 }
 
 .team__detail li::before {
-  content: '- ';
+  content: '-';
+  position: absolute;
+  left: -15px;
 }
 
 /*
@@ -357,6 +372,7 @@ html, body {
 
 .banner__text {
   color: #FFF;
+  font-family: 'remixcon';
   font-size: 55px;
   line-height: 60px;
 }
@@ -558,26 +574,31 @@ input[type="number"] {
 */
 
 .popup {
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 1;
 }
 
+.popup--open {
+  display: block;
+}
+
 /*
 ----------------------------------------------------------------
-	Popup #join-the-waitlist
+	Popup #popup-waitlist
 -----------------------------------------------------------------
 */
 
-.popup#join-the-waitlist {
+.popup#popup-waitlist {
   background: rgba(21, 86, 45, 0.5);
   backdrop-filter: blur(30px);
   width: 100%;
   height: 100%;
 }
 
-.popup#join-the-waitlist .wrapper {
+.popup#popup-waitlist .wrapper {
   background-color: #FFF;
   border-radius: 25px;
   padding: 25px 50px;
@@ -588,20 +609,22 @@ input[type="number"] {
   max-width: 500px;
 }
 
-.popup#join-the-waitlist .form {
+.popup#popup-waitlist .form {
   text-align: center;
 }
 
-.popup#join-the-waitlist .form__title {
+.popup#popup-waitlist .form__title {
   color: #000;
+  font-size: 20px;
   font-weight: 700;
+  margin: 0;
 }
 
-.popup#join-the-waitlist .form__input {
+.popup#popup-waitlist .form__input {
   margin-top: 10px;
 }
 
-.popup#join-the-waitlist .form__button {
+.popup#popup-waitlist .form__button {
   border-radius: 25px;
   font-size: 15px;
   line-height: 20px;
@@ -611,52 +634,59 @@ input[type="number"] {
 
 /*
 ----------------------------------------------------------------
-	Popup #contribute
+	Popup #popup-contribute
 -----------------------------------------------------------------
 */
 
-.popup#contribute {
+.popup#popup-contribute {
   background: rgba(21, 86, 45, 0.5);
   backdrop-filter: blur(30px);
   width: 100vw;
   height: 100vh;
 }
 
-.popup#contribute .wrapper {
+.popup#popup-contribute .wrapper {
   padding: 20px;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  width: 100%;
   max-width: 500px;
 }
 
-.popup#contribute .form__input {
+.popup#popup-contribute .form__title {
+  font-family: 'remixcon';
+  font-size: 35px;
+  margin: 0;
+}
+
+.popup#popup-contribute .form__input {
   margin-top: 50px;
 }
 
-.popup#contribute .form__action {
+.popup#popup-contribute .form__action {
   margin-top: 50px;
   text-align: center;
 }
 
-.popup#contribute .form__button {
+.popup#popup-contribute .form__button {
   margin-top: 10px;
   padding: 10px 30px;
 }
 
-.popup#contribute .form__options {
+.popup#popup-contribute .form__options {
   margin-top: 30px;
   text-align: center;
 }
 
-.popup#contribute .form__text {
+.popup#popup-contribute .form__text {
   color: #FFF;
   font-size: 20px;
   display: block;
 }
 
-.popup#contribute .form__option {
+.popup#popup-contribute .form__option {
   background-color: #FFF;
   border-radius: 5px;
   display: flex;
@@ -666,14 +696,14 @@ input[type="number"] {
   padding: 10px 20px;
 }
 
-.popup#contribute .form__option-text {
+.popup#popup-contribute .form__option-text {
   flex: 1;
   font-size: 14px;
   margin-left: 10px;
   text-align: left;
 }
 
-.popup#contribute .form__option-image {
+.popup#popup-contribute .form__option-image {
   height: 20px;
 }
 
@@ -1080,23 +1110,23 @@ input[type="number"] {
 
   /*
   ----------------------------------------------------------------
-    Popup #join-the-waitlist
+    Popup #popup-waitlist
   -----------------------------------------------------------------
   */
 
-  .popup#join-the-waitlist {
+  .popup#popup-waitlist {
     width: 100vw;
     height: 100vh;
   }
 
-  .popup#join-the-waitlist .wrapper {
+  .popup#popup-waitlist .wrapper {
     border-radius: 25px;
     padding: 20px;
     width: 100%;
     max-width: 80%;
   }
 
-  .popup#join-the-waitlist .form__button {
+  .popup#popup-waitlist .form__button {
     width: 100%;
   }
 
@@ -1192,8 +1222,17 @@ input[type="number"] {
   */
   
   .button {
+    color: #FFF;
+    cursor: pointer;
     font-size: 16px;
     line-height: 25px;
+    outline: none;
+  }
+
+  .button:hover,
+  .button:focus {
+    color: #FFF;
+    text-decoration: none;
   }
 
   /*
@@ -1201,6 +1240,14 @@ input[type="number"] {
     Team
   -----------------------------------------------------------------
   */
+
+  .team__title.team__title--horizontal {
+    display: none;
+  }
+  
+  .team__title.team__title--vertical {
+    display: inline-block;
+  }
 
   .team__list {
     display: block;
@@ -1220,8 +1267,6 @@ input[type="number"] {
   }
 
   .team__name {
-    color: #000;
-    display: block;
     font-size: 16px;
     font-weight: 700;
     margin-top: 10px;
@@ -1230,17 +1275,6 @@ input[type="number"] {
   .team__position {
     display: block;
     font-size: 16px;
-  }
-
-  .team__detail {
-    font-size: 16px;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-
-  .team__detail li::before {
-    content: '- ';
   }
 
   /*

@@ -2,7 +2,7 @@
 <html dir="ltr" lang="en-US">
 <head>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-	<link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
+	<link rel="stylesheet" href="fonts/stylesheet.css" type="text/css" />
 	<link rel="stylesheet" href="new.css" type="text/css" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<title>NVRO - Charity token for new model crowdfunding ecosystem for supporting tokenomics environment</title>
@@ -20,23 +20,23 @@
             <a href="" class="menu__link">Objectives</a>
           </li>
           <li class="menu__item">
-            <a href="" class="menu__link">Contribute</a>
+            <a href="#contribute" class="menu__link">Contribute</a>
           </li>
           <li class="menu__item">
-            <a href="" class="menu__link">Roadmap</a>
+            <a href="#roadmap" class="menu__link">Roadmap</a>
           </li>
           <li class="menu__item">
-            <a href="" class="menu__link">Whitepaper</a>
+            <a href="#whitepaper" class="menu__link">Whitepaper</a>
           </li>
           <li class="menu__item">
-            <a href="" class="menu__link">Tokenomics</a>
+            <a href="#tokenomics" class="menu__link">Tokenomics</a>
           </li>
           <li class="menu__item">
-            <a href="" class="menu__link">About Us</a>
+            <a href="#about" class="menu__link">About Us</a>
           </li>
         </ul>
         <div class="header__action">
-          <button class="button">
+          <button class="button" onclick="toggleWaitlistPopup()">
             Buy NVRO Token
           </button>
         </div>
@@ -59,16 +59,16 @@
             <a href="" class="menu__link">Contribute</a>
           </li>
           <li class="menu__item">
-            <a href="" class="menu__link">Roadmap</a>
+            <a href="#roadmap" class="menu__link">Roadmap</a>
           </li>
           <li class="menu__item">
-            <a href="" class="menu__link">Whitepaper</a>
+            <a href="#whitepaper" class="menu__link">Whitepaper</a>
           </li>
           <li class="menu__item">
-            <a href="" class="menu__link">Tokenomics</a>
+            <a href="#tokenomics" class="menu__link">Tokenomics</a>
           </li>
           <li class="menu__item">
-            <a href="" class="menu__link">About Us</a>
+            <a href="#about" class="menu__link">About Us</a>
           </li>
           <li class="menu__item">
             <button class="button">
@@ -88,13 +88,13 @@
         </h4>
       </div>
       <div class="action">
-        <button class="button">
+        <button class="button" onclick="toggleWaitlistPopup()">
           Request early access
         </button>
         <p>
           Welcome to your future investment model
         </p>
-        <a href="#" class="arrow-down"></a>
+        <a href="#objectives" class="arrow-down"></a>
       </div>
     </div>
   </section>
@@ -185,7 +185,7 @@
           </div>
         </div>
       </div>
-      <button class="button">
+      <button class="button" onclick="toggleContributePopup()">
         Contribute
       </button>
     </div>
@@ -583,7 +583,8 @@
       </p>
       <div class="team">
         <div class="team__header">
-          <img src="./images/team-title-horizontal.svg" class="team__title" />
+          <img src="./images/team-title-horizontal.svg" class="team__title team__title--horizontal" />
+          <img src="./images/team-title-vertical.png" class="team__title team__title--vertical" />
         </div>
         <ul class="team__list">
           <li class="team__item">
@@ -647,7 +648,7 @@
           to make a better place to live
         </p>
         <div class="banner__action">
-          <button class="button">
+          <button class="button" onclick="toggleContributePopup()">
             Contribute
           </button>
         </div>
@@ -687,27 +688,27 @@
             <a href="" class="menu__link">Contribute</a>
           </li>
           <li class="menu__item">
-            <a href="" class="menu__link">Roadmap</a>
+            <a href="#roadmap" class="menu__link">Roadmap</a>
           </li>
           <li class="menu__item">
-            <a href="" class="menu__link">Whitepaper</a>
+            <a href="#whitepaper" class="menu__link">Whitepaper</a>
           </li>
           <li class="menu__item">
-            <a href="" class="menu__link">Tokenomics</a>
+            <a href="#tokenomics" class="menu__link">Tokenomics</a>
           </li>
           <li class="menu__item">
-            <a href="" class="menu__link">About Us</a>
+            <a href="#about" class="menu__link">About Us</a>
           </li>
         </ul>
         <div class="footer__action">
-          <button class="button">
+          <button class="button" onclick="toggleWaitlistPopup()">
             Buy NVRO Token
           </button>
         </div>
       </div>
     </div>
   </section>
-  <section id="join-the-waitlist" class="popup" style="display: none;">
+  <section id="popup-waitlist" class="popup">
     <div class="wrapper">
       <form class="form">
         <h5 class="form__title">
@@ -722,7 +723,7 @@
       </form>
     </div>
   </section>
-  <section id="contribute" class="popup" style="display: none;">
+  <section id="popup-contribute" class="popup">
     <div class="wrapper">
       <form class="form">
         <h2 class="form__title">
@@ -743,6 +744,7 @@
           <label for="option-paypal" class="form__option">
             <input type="radio" id="option-paypal" name="contribute_options" value="paypal" />
             <span class="form__option-text">Paypal</span>
+            <img src="./images/paypal.png" class="form__option-image" />
           </label>
           <label for="option-gopay" class="form__option">
             <input type="radio" id="option-gopay" name="contribute_options" value="gopay" />
@@ -753,5 +755,39 @@
       </form>
     </div>
   </section>
+  <script>
+    const popupWaitlist = document.getElementById('popup-waitlist');
+    const popupContribute = document.getElementById('popup-contribute');
+
+    function toggleWaitlistPopup() {
+      document.body.classList.toggle('lock-scroll');
+      popupWaitlist.classList.toggle('popup--open');
+    }
+
+    function toggleContributePopup() {
+      document.body.classList.toggle('lock-scroll');
+      popupContribute.classList.toggle('popup--open');
+    }
+
+    popupWaitlist.addEventListener("click", function(e) {
+      if(e.target === e.currentTarget) {
+        popupWaitlist.classList.remove('popup--open');
+        document.body.classList.remove('lock-scroll');
+      }
+    });
+
+    popupContribute.addEventListener("click", function(e) {
+      if(e.target === e.currentTarget) {
+        popupContribute.classList.remove('popup--open');
+        document.body.classList.remove('lock-scroll');
+      }
+    });
+
+    // function closePopup(e) {
+    //   if (e.target !== this) return;
+    //   e.classList.remove('popup--open');
+    //   document.body.classList.remove('lock-scroll');
+    // }
+  </script>
 </body>
 </html>
