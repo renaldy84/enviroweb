@@ -142,6 +142,16 @@ h1, h2, h3, h4, h5, h6 {
 #section-roadmap.page-section {
     min-height: 960px;
 }
+
+#section-objectives.page-section {
+    min-height: 1200px;
+}
+section#section-objectives{
+     min-height: 1200px;
+}
+section#section-donation{
+     min-height: 1200px;
+}
 .roadmap-chart-wrap .roadmap-text {
     position: absolute;
     font-size: 14px;
@@ -296,7 +306,7 @@ h1, h2, h3, h4, h5, h6 {
     color: #000;
 }
 .footer-contacts .cont-phone {
-    margin-right: 50px;
+    margin-right: 10px;
 }
 #footer {
     background-color: #fff;
