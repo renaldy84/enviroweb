@@ -148,6 +148,37 @@ html, body {
 
 /*
 ----------------------------------------------------------------
+  Video
+-----------------------------------------------------------------
+*/
+
+.video {
+  border-radius: 15px;
+  display: block;
+  padding-top: 56.25%;
+  overflow: hidden;
+  position: relative;
+}
+
+.video__background {
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.video__play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+/*
+----------------------------------------------------------------
 	Menu
 -----------------------------------------------------------------
 */
@@ -338,6 +369,94 @@ html, body {
 .banner__action .button {
   border-radius: 15px;
   padding: 10px 60px;
+}
+
+/*
+----------------------------------------------------------------
+	Testimonial
+-----------------------------------------------------------------
+*/
+
+.testimonial {
+  position: absolute;
+}
+
+.testimonial--shown-on-mobile {
+  display: none;
+}
+
+.testimonial__bubble {
+  background-color: rgba(21, 86, 45, 0.5);
+  backdrop-filter: blur(30px);
+  border-radius: 10px;
+  color: #FFF;
+  font-size: 14px;
+  padding: 15px;
+  position: relative;
+  text-align: left;
+  max-width: 200px;
+}
+
+.testimonial__bubble::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+
+.testimonial--left .testimonial__bubble::after {
+  border-top: 20px solid rgba(21, 86, 45, 0.5);
+  border-right: 20px solid transparent;
+  left: 20px;
+  bottom: -20px;
+}
+
+.testimonial--right .testimonial__bubble::after {
+  border-top: 20px solid rgba(21, 86, 45, 0.5);
+  border-left: 20px solid transparent;
+  right: 20px;
+  bottom: -20px;
+}
+
+.testimonial__account {
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.testimonial--right .testimonial__account {
+  justify-content: flex-end;
+}
+
+.testimonial__avatar {
+  width: 60px;
+  height: 60px;
+}
+
+.testimonial__profile {
+  display: block;
+  text-align: left;
+}
+
+.testimonial__avatar + .testimonial__profile {
+  margin-left: 10px;
+}
+
+.testimonial--right .testimonial__profile {
+  text-align: right;
+}
+
+.testimonial__profile-name {
+  color: #FFF;
+  display: block;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.testimonial__profile-position {
+  color: #FFF;
+  display: block;
+  font-size: 14px;
 }
 
 /*
@@ -622,6 +741,37 @@ input[type="number"] {
   margin-top: 30px;
   width: 500px;
   height: 500px;
+}
+
+/*
+----------------------------------------------------------------
+	Section #contribute
+-----------------------------------------------------------------
+*/
+
+.section#contribute {
+  background-image: url("./images/section-contribute.png");
+  padding: 50px 0;
+  text-align: center;
+}
+
+.section#contribute .section__wrapper {
+  align-items: center;
+  justify-content: center;
+}
+
+.section#contribute .video-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 650px;
+}
+
+.section#contribute .video {
+  width: 100%;
+}
+
+.section#contribute .button {
+  margin-top: 50px;
 }
 
 /*
@@ -1028,6 +1178,50 @@ input[type="number"] {
 
   /*
   ----------------------------------------------------------------
+    Testimonial
+  -----------------------------------------------------------------
+  */
+
+  .testimonial {
+    display: none;
+  }
+
+  .testimonial--shown-on-mobile {
+    display: inline-block;
+  }
+
+  .testimonial__bubble {
+    font-size: 12px;
+    padding: 10px;
+    max-width: 150px;
+  }
+  
+  .testimonial--left .testimonial__bubble::after {
+    border-top: 10px solid rgba(21, 86, 45, 0.5);
+    border-right: 10px solid transparent;
+    left: 15px;
+    bottom: -10px;
+  }
+  
+  .testimonial--right .testimonial__bubble::after {
+    border-top: 10px solid rgba(21, 86, 45, 0.5);
+    border-left: 10px solid transparent;
+    right: 15px;
+    bottom: -10px;
+  }
+
+  .testimonial__account {
+    margin-top: 15px;
+  }
+
+  .testimonial__profile-name,
+  .testimonial__profile-position {
+    font-size: 12px;
+  }
+
+
+  /*
+  ----------------------------------------------------------------
     Section
   -----------------------------------------------------------------
   */
@@ -1100,6 +1294,17 @@ input[type="number"] {
   .section#objectives img {
     width: 300px;
     height: 300px;
+  }
+
+  /*
+  ----------------------------------------------------------------
+    Section #contribute
+  -----------------------------------------------------------------
+  */
+
+  .section#contribute {
+    padding: 50px 0;
+    min-height: auto;
   }
 
   /*
