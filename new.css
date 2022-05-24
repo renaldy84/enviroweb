@@ -8,6 +8,10 @@ html, body {
   position: relative;
 }
 
+.lock-scroll {
+  overflow-y: hidden;
+}
+
 /*
 ----------------------------------------------------------------
 	Header
@@ -334,6 +338,148 @@ html, body {
 .banner__action .button {
   border-radius: 15px;
   padding: 10px 60px;
+}
+
+/*
+----------------------------------------------------------------
+	Input
+-----------------------------------------------------------------
+*/
+
+input[type="text"],
+input[type="email"],
+input[type="number"] {
+  background-color: #FFF;
+  border: 1px solid #575755;
+  border-radius: 25px;
+  padding: 10px 32px;
+  width: 100%;
+}
+
+/*
+----------------------------------------------------------------
+	Popup
+-----------------------------------------------------------------
+*/
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+/*
+----------------------------------------------------------------
+	Popup #join-the-waitlist
+-----------------------------------------------------------------
+*/
+
+.popup#join-the-waitlist {
+  background: rgba(21, 86, 45, 0.5);
+  backdrop-filter: blur(30px);
+  width: 100%;
+  height: 100%;
+}
+
+.popup#join-the-waitlist .wrapper {
+  background-color: #FFF;
+  border-radius: 25px;
+  padding: 25px 50px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 500px;
+}
+
+.popup#join-the-waitlist .form {
+  text-align: center;
+}
+
+.popup#join-the-waitlist .form__title {
+  color: #000;
+  font-weight: 700;
+}
+
+.popup#join-the-waitlist .form__input {
+  margin-top: 10px;
+}
+
+.popup#join-the-waitlist .form__button {
+  border-radius: 25px;
+  font-size: 15px;
+  line-height: 20px;
+  margin-top: 10px;
+  padding: 15px 50px;
+}
+
+/*
+----------------------------------------------------------------
+	Popup #contribute
+-----------------------------------------------------------------
+*/
+
+.popup#contribute {
+  background: rgba(21, 86, 45, 0.5);
+  backdrop-filter: blur(30px);
+  width: 100vw;
+  height: 100vh;
+}
+
+.popup#contribute .wrapper {
+  padding: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 500px;
+}
+
+.popup#contribute .form__input {
+  margin-top: 50px;
+}
+
+.popup#contribute .form__action {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.popup#contribute .form__button {
+  margin-top: 10px;
+  padding: 10px 30px;
+}
+
+.popup#contribute .form__options {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.popup#contribute .form__text {
+  color: #FFF;
+  font-size: 20px;
+  display: block;
+}
+
+.popup#contribute .form__option {
+  background-color: #FFF;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  font-size: 0;
+  margin: 10px 0 0;
+  padding: 10px 20px;
+}
+
+.popup#contribute .form__option-text {
+  flex: 1;
+  font-size: 14px;
+  margin-left: 10px;
+  text-align: left;
+}
+
+.popup#contribute .form__option-image {
+  height: 20px;
 }
 
 /*
@@ -668,6 +814,42 @@ html, body {
 
   .logo {
     height: 30px;
+  }
+
+  /*
+  ----------------------------------------------------------------
+    Popup #join-the-waitlist
+  -----------------------------------------------------------------
+  */
+
+  .popup#join-the-waitlist {
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .popup#join-the-waitlist .wrapper {
+    border-radius: 25px;
+    padding: 20px;
+    width: 100%;
+    max-width: 80%;
+  }
+
+  .popup#join-the-waitlist .form__button {
+    width: 100%;
+  }
+
+  /*
+  ----------------------------------------------------------------
+    Popup #contribute
+  -----------------------------------------------------------------
+  */
+
+  .popup#contribute .wrapper {
+    width: 100%;
+  }
+
+  .popup#contribute .form__text {
+    font-size: 16px;
   }
 
   /*
