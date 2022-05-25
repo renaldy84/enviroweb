@@ -227,6 +227,7 @@ html, body {
 	line-height: 35px;
 	outline: none;
 	padding: 10px 20px;
+  text-decoration: none;
 	white-space: nowrap;
 }
 
@@ -486,7 +487,7 @@ html, body {
 }
 
 .roadmap__image {
-  width: 100%;
+  width: 80%;
 }
 
 .roadmap__content {
@@ -516,14 +517,14 @@ html, body {
 
 .roadmap__title {
   color: #FFF;
-  font-size: 25px;
+  font-size: 20px;
   font-weight: 700;
   margin: 0;
 }
 
 .roadmap__list {
   list-style: none;
-  margin: 0;
+  margin: 5px 0 0;
   padding-left: 20px;
 }
 
@@ -539,10 +540,22 @@ html, body {
   left: -15px;
 }
 
+.roadmap__list-item.roadmap__list-item--hide {
+  display: none;
+}
+
 .roadmap__list-link {
+  background-color: transparent;
+  border: 0;
   color: #FFF;
   font-size: 14px;
+  font-weight: 700;
   padding-left: 20px;
+  text-decoration: none;
+}
+
+.roadmap__list-link.roadmap__list-link--hide {
+  display: none;
 }
 
 .roadmap__list-link:hover,
@@ -1432,6 +1445,7 @@ input[type="number"] {
     padding: 10px 5px;
     position: absolute;
     width: 200px;
+    z-index: 1;
   }
 
   .roadmap__content--left .roadmap__detail {
@@ -1463,6 +1477,10 @@ input[type="number"] {
 
   .roadmap__toggle:checked ~ .roadmap__detail {
     display: block;
+  }
+
+  .roadmap__list {
+    margin: 0;
   }
   
   .roadmap__list-item {
