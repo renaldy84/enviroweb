@@ -22,7 +22,9 @@ html, body {
 .header {
   display: flex;
   align-items: center;
-  position: relative;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
   width: 100%;
 }
 
@@ -145,6 +147,14 @@ html, body {
 .logo {
   position: relative;
   height: 38px;
+}
+
+.logo.logo--inverse {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
 }
 
 /*
@@ -789,6 +799,47 @@ input[type="number"] {
   transform: translateX(-50%);
   width: 138px;
   height: 5px;
+}
+
+/*
+----------------------------------------------------------------
+	Section #header
+-----------------------------------------------------------------
+*/
+
+.section#header {
+  padding: 30px 0;
+  position: sticky;
+  top: 0;
+  transition: all linear 0.1s;
+  width: 100%;
+  min-height: auto;
+  z-index: 99;
+}
+
+.section#header + .section {
+  margin-top: -115px;
+}
+
+.section#header.section--sticky {
+  background-color: #FFF;
+}
+
+.section#header.section--sticky .header:not(.header--mobile) .menu__link {
+  color: #000;
+}
+
+.section#header.section--sticky .header__menu-toggle-button span {
+  background-color: #000;
+}
+
+
+.section#header.section--sticky .logo:not(.logo--inverse) {
+  opacity: 0;
+}
+
+.section#header.section--sticky .logo--inverse {
+  opacity: 1;
 }
 
 /*
@@ -1531,6 +1582,16 @@ input[type="number"] {
   .section__title::after {
     bottom: -15px;
     width: 50%;
+  }
+
+  /*
+  ----------------------------------------------------------------
+    Section #header
+  -----------------------------------------------------------------
+  */
+
+  .section#header + .section {
+    margin-top: -90px;
   }
 
   /*
