@@ -7,6 +7,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<title>NVRO - Charity token for new model crowdfunding ecosystem for supporting tokenomics environment</title>
 	<link rel="icon" type="image/png" href="images/favicon.png">
+
+
 </head>
 <body>
   <section id="header" class="section">
@@ -920,6 +922,7 @@
   </section>
   <section id="popup-waitlist" class="popup">
     <div class="wrapper">
+      <!-- ko ifnot: sent -->
       <form class="form">
         <h5 class="form__title">
           Be the first people to get NVRO token!
@@ -927,10 +930,26 @@
         <p class="form__description">
           Drop your details below to be part of build a better place to live Start Now.
         </p>
-        <input type="text" class="form__input" placeholder="Your name" />
-        <input type="email" class="form__input" placeholder="Your email address" />
-        <input type="submit" class="form__button button" value="Join the waitlist" />
+        <input type="text" class="form__input" placeholder="Your name" 
+            data-bind="value:name"/>
+        <input type="email" class="form__input" placeholder="Your email address" 
+          data-bind="value:email"/>
+        <input type="button" class="form__button button" value="Join the waitlist" data-bind="click: join_waitinglist"/>
       </form>
+      <!-- /ko -->
+      <!-- ko if: sent -->
+      <form class="form">
+        <h5 class="form__title">
+          Thank you!
+        </h5>
+        <p class="form__description">
+          We have sent your invitation to your email
+        </p>
+        <input type="button" class="form__button button" value="Close" 
+        data-bind="click: close_popup"/>
+      </form>
+      <!-- /ko -->
+
     </div>
   </section>
   <section id="popup-contribute" class="popup">
@@ -965,6 +984,8 @@
       </form>
     </div>
   </section>
+   <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/knockout/3.5.0/knockout-min.js'></script>
+   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   <script>
     const header = document.getElementById('header');
     const popupWaitlist = document.getElementById('popup-waitlist');
@@ -991,13 +1012,13 @@
       document.body.classList.toggle('lock-scroll');
       popupContribute.classList.toggle('popup--open');
     }
-
+    /*
     popupWaitlist.addEventListener('click', function(e) {
       if(e.target === e.currentTarget) {
         popupWaitlist.classList.remove('popup--open');
         document.body.classList.remove('lock-scroll');
       }
-    });
+    });*/
 
     popupContribute.addEventListener('click', function(e) {
       if(e.target === e.currentTarget) {
@@ -1007,13 +1028,54 @@
     });
     
     window.addEventListener('scroll', function(e) {
-      console.log(this.scrollY, header.offsetHeight)
+     
       if(scrollY > header.offsetHeight) {
         header.classList.add('section--sticky')
       } else {
         header.classList.remove('section--sticky')
       }
     });
+  </script>
+  <script>
+    const Model = function(){
+      const self = this;
+      this.name =  ko.observable('');
+      this.email = ko.observable('');
+      this.sent = ko.observable(false);
+      this.close_popup = ()=>{
+        popupWaitlist.classList.remove('popup--open');
+        document.body.classList.remove('lock-scroll');
+      };
+      this.join_waitinglist = () => {
+        self.sent(true);
+        if(self.name().length === 0 && self.email().length === 0) return;
+        axios.post('https://wl.nvro.org', {
+            name: self.name(),
+            email: self.email()
+          })
+          .then(function (response) {
+            console.log({response});
+
+          })
+          .catch(function (error) {
+            console.log({error});
+          });
+      }
+    }
+    /*var _model = {
+        name: ko.observable(''),
+        email: ko.observable(''),
+        join_waitinglist:()=>{
+          waitinglist();
+         
+          popupWaitlist.classList.remove('popup--open');
+          document.body.classList.remove('lock-scroll');
+        }
+    };*/
+    const model = new Model();
+    ko.applyBindings(model);
+   
+   
   </script>
 </body>
 </html>
