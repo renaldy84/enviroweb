@@ -1061,7 +1061,7 @@
       this.join_waitinglist = () => {
         self.sent(true);
         if(self.name().length === 0 && self.email().length === 0) return;
-        axios.post('https://wl.nvro.org', {
+        axios.post('https://wl.nvro.org/submit', {
             name: self.name(),
             email: self.email()
           })
