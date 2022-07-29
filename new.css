@@ -1794,3 +1794,23 @@ input[type="number"] {
     font-size: 15px;
   }
 }
+
+/*
+----------------------------------------------------------------
+	Popup
+-----------------------------------------------------------------
+*/
+
+.popup {
+  padding: 15px !important;
+  max-width: 800px !important;
+}
+
+.popup__link {
+  display: block;
+  font-size: 0;
+}
+
+.popup__image {
+  width: 100%;
+}
