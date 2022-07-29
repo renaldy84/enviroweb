@@ -10,7 +10,7 @@
 
 
 </head>
-<body>
+<body style="background:#000000">
   <section id="header" class="section">
     <div class="section__wrapper">
       <div class="header">
@@ -58,11 +58,11 @@
           Join the NVRO community and contribute to create zero waste environment<br />
           through building our next generations character.
         </h4>
-      </div>
-      <div class="action">
-        <button class="button" onclick="toggleWaitlistPopup()">
+         <button class="button" onclick="toggleWaitlistPopup()">
           Register
         </button>
+      </div>
+      <div class="action" style="margin-top:-50px;">
        
       </div>
     </div>
@@ -80,8 +80,14 @@
         <input type="text" class="form__input" placeholder="Your name" 
             data-bind="value:name"/>
         <input type="email" class="form__input" placeholder="Your email address" 
-          data-bind="value:email"/>
-        <input type="button" class="form__button button" value="Join the waitlist" data-bind="click: join_waitinglist"/>
+        data-bind="value:email"/>
+         <input type="text" class="form__input" placeholder="Your Whatsapp Number" 
+        data-bind="value:wa"/>
+        <input type="text" class="form__input" placeholder="Your BSC Wallet Address" 
+        data-bind="value:wallet"/>
+        <p style="margin:0;font-size:10px;padding-top:5px;">* Your Metamask Wallet Address</p>
+        <input type="button" class="form__button button" value="Join the waitlist" data-bind="click: submit"/>
+
       </form>
       <!-- /ko -->
       <!-- ko if: sent -->
@@ -127,20 +133,7 @@
       document.body.classList.toggle('lock-scroll');
       popupContribute.classList.toggle('popup--open');
     }
-    /*
-    popupWaitlist.addEventListener('click', function(e) {
-      if(e.target === e.currentTarget) {
-        popupWaitlist.classList.remove('popup--open');
-        document.body.classList.remove('lock-scroll');
-      }
-    });*/
-
-    popupContribute.addEventListener('click', function(e) {
-      if(e.target === e.currentTarget) {
-        popupContribute.classList.remove('popup--open');
-        document.body.classList.remove('lock-scroll');
-      }
-    });
+   
     
     window.addEventListener('scroll', function(e) {
      
