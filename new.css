@@ -1797,20 +1797,20 @@ input[type="number"] {
 
 /*
 ----------------------------------------------------------------
-	Popup
+	Modal
 -----------------------------------------------------------------
 */
 
-.popup {
+.modal {
   padding: 15px !important;
   max-width: 800px !important;
 }
 
-.popup__link {
+.modal__link {
   display: block;
   font-size: 0;
 }
 
-.popup__image {
+.modal__image {
   width: 100%;
 }
