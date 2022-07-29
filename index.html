@@ -15,9 +15,9 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
 </head>
 <body>
-  <div id="nvro-popup" class="modal popup">
-    <a href="#" class="popup__link">
-      <img src="./images/airdrop-popup-image.jpg" class="popup__image" />
+  <div id="nvro-modal" class="modal">
+    <a href="#" class="modal__link">
+      <img src="./images/airdrop-modal-image.jpg" class="modal__image" />
     </a>
   </div>
   <section id="header" class="section">
@@ -1079,7 +1079,7 @@
     ko.applyBindings(model);
    
     $(document).ready(function() {
-      $('#nvro-popup').modal({
+      $('#nvro-modal').modal({
         fadeDuration: 250
       });
     })
